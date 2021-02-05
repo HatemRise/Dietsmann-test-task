@@ -16,7 +16,7 @@ class Connect : Connection{
     private lateinit var user: User
 
     @WorkerThread
-    override fun login(login:String, password:String) : User? {
+    override fun login(login: String, password: String) : User? {
         val httpURLConnection = URL("${SERVER}/Auth").openConnection() as HttpURLConnection
         httpURLConnection.apply {
             connectTimeout = 5000
@@ -33,13 +33,16 @@ class Connect : Connection{
             OutputStreamWriter(httpURLConnection.outputStream).use {
                 it.write(body.toString())
             }
-            if(httpURLConnection.responseCode == HttpURLConnection.HTTP_OK){
+            if(httpURLConnection.responseCode == HttpURLConnection.HTTP_OK) {
                 val response = InputStreamReader(httpURLConnection.inputStream)
-                var data = ""
+                var data: String
                 response.use {
                     data = it.readText()
                 }
-                user = Gson().fromJson(data, User::class.java)
+                if (data != "{\"success\":false}"){
+                    user = Gson().fromJson(data, User::class.java)
+                    return user
+                }
             }
         }finally {
             httpURLConnection.disconnect()
@@ -48,6 +51,7 @@ class Connect : Connection{
     }
 
     override fun setUser(token: String, role: String, name: String){
+        user = User()
         user.empid = token
         user.role = role
         user.fio = name
@@ -64,7 +68,7 @@ class Connect : Connection{
         try {
             if (httpURLConnection.responseCode == HttpURLConnection.HTTP_OK) {
                 val response = InputStreamReader(httpURLConnection.inputStream)
-                var data = ""
+                var data: String
                 response.use {
                     data = it.readText()
                 }
@@ -98,7 +102,7 @@ class Connect : Connection{
         }
         if (httpURLConnection.responseCode == HttpURLConnection.HTTP_OK) {
             val response = InputStreamReader(httpURLConnection.inputStream)
-            var data = ""
+            var data: String
             response.use {
                 data = it.readText()
             }
