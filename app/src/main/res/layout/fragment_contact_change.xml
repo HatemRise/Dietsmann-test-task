@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactChangeFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/change_contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Имя"
+        android:textStyle="bold"/>
+    <RadioGroup
+        android:id="@+id/change_contact_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/change_contact_status_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Болен"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/change_contact_status_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Здоров"
+            android:layout_weight="1"/>
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/change_contact_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/new_contact_cancel_button"
+            android:background="@drawable/button_background"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/change_contact_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/report_save_button"
+            android:background="@drawable/button_background"/>
+    </LinearLayout>
+
+</LinearLayout>

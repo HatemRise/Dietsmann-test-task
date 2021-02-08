@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.report_list.AddContactToReportFragment">
+    <EditText
+        android:id="@+id/new_contact_fio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:nextFocusForward="@id/new_contact_placecont"/>
+    <EditText
+        android:id="@+id/new_contact_placecont"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:id="@+id/radio_button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/new_contact_group_selector_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/report_radiobutton_work" />
+
+        <RadioButton
+            android:id="@+id/new_contact_group_selector_family"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/report_radiobutton_family" />
+
+        <RadioButton
+            android:id="@+id/new_contact_group_selector_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/report_radiobutton_friends" />
+
+        <RadioButton
+            android:id="@+id/new_contact_group_selector_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/report_radiobutton_other"/>
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/new_contact_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/contact_buttons_background"
+            android:textStyle="bold"
+            android:text="@string/new_contact_cancel_button"
+            android:padding="10dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/new_contact_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/contact_buttons_background"
+            android:text="@string/new_contact_add_button"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+    </LinearLayout>
+</LinearLayout>
