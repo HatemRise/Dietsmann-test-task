@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="low_opacity">#00FFFFFF</color>
+    <color name="healthy_status_true">#5eb440</color>
+    <color name="healthy_status_false">#fd4949</color>
+</resources>

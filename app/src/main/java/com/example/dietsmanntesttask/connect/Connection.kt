@@ -1,6 +1,7 @@
 package com.example.dietsmanntesttask.connect
 
 import android.text.Editable
+import com.example.dietsmanntesttask.MainActivity
 import com.example.dietsmanntesttask.entities.Contact
 import com.example.dietsmanntesttask.entities.Day
 import com.example.dietsmanntesttask.entities.User

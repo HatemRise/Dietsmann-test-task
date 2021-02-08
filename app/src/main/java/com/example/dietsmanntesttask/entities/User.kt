@@ -1,7 +1,7 @@
 package com.example.dietsmanntesttask.entities
 
-class User {
-    internal lateinit var fio: String
-    internal lateinit var empid: String
-    internal lateinit var role: String
-}
+data class User(
+        var fio: String,
+        var empid: String,
+        var role: String
+)

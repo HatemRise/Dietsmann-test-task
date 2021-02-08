@@ -16,9 +16,9 @@ import com.example.dietsmanntesttask.R
 class LoginFragment : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_login, container, false)
         view.findViewById<Button>(R.id.login).setOnClickListener {
@@ -40,11 +40,11 @@ class LoginFragment : Fragment() {
                         } else {
                             Handler(Looper.getMainLooper()).post {
                                 Toast.makeText(
-                                    activity,
-                                    "Не верный пароль, или логин",
-                                    Toast.LENGTH_SHORT
+                                        activity,
+                                        "Не верный пароль, или логин",
+                                        Toast.LENGTH_SHORT
                                 )
-                                    .show()
+                                        .show()
                                 it.isEnabled = true
                                 view.findViewById<EditText>(R.id.username).text.clear()
                                 view.findViewById<EditText>(R.id.password).text.clear()

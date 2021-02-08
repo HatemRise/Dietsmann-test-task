@@ -12,4 +12,20 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_report">Добавить отчёт</string>
+    <string name="temperature">Температура</string>
+    <string name="contacts">Контакты</string>
+    <string name="logout">Выйти</string>
+    <string name="report_date_label">Дата отчёта</string>
+    <string name="report_temperature_label">Ваша температура</string>
+    <string name="add">+ Добавить</string>
+    <string name="report_contacts_label">Вы контактировали</string>
+    <string name="report_add_contact">+ Добавить контакт</string>
+    <string name="report_radiobutton_other">Другие</string>
+    <string name="report_radiobutton_friends">Друзья</string>
+    <string name="report_radiobutton_family">Семья</string>
+    <string name="report_radiobutton_work">Работа</string>
+    <string name="report_close_button">Закрыть</string>
+    <string name="report_save_button">Сохранить</string>
+    <string name="new_contact_cancel_button">Отмена</string>
+    <string name="new_contact_add_button">Добавить</string>
 </resources>
